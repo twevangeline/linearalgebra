@@ -1,10 +1,11 @@
 import scipy as sp
 import numpy as np
+from scipy import linalg
 matrix = np.array([[4.3,8.9],[2.2,3.4]])
-norm = sp.linalg.norm(matrix)
+norm = linalg.norm(matrix)
 print(norm)
 print(sp.square([v for row in matrix for v in row]).sum(**(0.5)))
-eigvals,eigvecs = sp.linalg.eig(matrix)
+eigvals,eigvecs = linalg.eig(matrix)
 print('eigenvalues =',eigvals)
 print('eigenvectora = \n',eigvecs)
 
